@@ -1,8 +1,13 @@
 <html>
 <body>
-
-Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?>
+<?php
+if( $_GET["name"] || $_GET["email"] || $_GET["contact"])
+{
+echo "Welcome: ". $_GET['name']. "<br />";
+echo "Your Email is: ". $_GET["email"]. "<br />";
+echo "Your Mobile No. is: ". $_GET["contact"];
+}
+?>
 
 </body>
 </html>
