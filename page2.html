@@ -8,7 +8,9 @@ Hide   Expand    Copy Code
 <body>
 <h4>These are the data from page1.html.</h4>
 <script>
- 
+ <form method="get" action="page2.html">
+<input type="text" nane="value1">
+</form>
 var queryString = decodeURIComponent(window.location.search);
 queryString = queryString.substring(1);
 var queries = queryString.split("&");
