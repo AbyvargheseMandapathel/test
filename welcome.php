@@ -9,5 +9,9 @@ echo "Your Mobile No. is: ". $_GET["contact"];
 }
 ?>
 
+<?Php
+$t1=$_REQUEST["t1"];
+Welcome <b>$t1</b>
+?>
 </body>
 </html>
