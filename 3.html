@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+
+    // Function for retrieveing value from a cookie
+    function getCookie(c_name)
+    {
+        var i,x,y,ARRcookies=document.cookie.split(";");
+        for (i=0;i<ARRcookies.length;i++)
+        {
+            x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+            y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+            x=x.replace(/^\s+|\s+$/g,"");
+            if (x==c_name)
+            {
+                return unescape(y);
+            }
+        }
+    }
+
+    // Called on body's `onload` event
+    function init() {
+        // Retrieving the text input's value which was stored into a cookie
+        var mytext = getCookie("mytext");
+
+        // Writing the value in the document
+        document.write("passed value = "+mytext);
+    }
+
+</script>
+</head>    
+
+<body onload="init();">
+
+</body>
+
+</html>
+
+
