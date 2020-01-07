@@ -1,15 +1,20 @@
 <html>
 <body>
-<div id="data"></div>
-<script language="Javascript">
-function processForm()
-{
-var parameters=location.search.substring(1).split("&");
-var temp=parameters(0).split("=");
-l=unescape(temp[1]);
-document.getElementById("data").innerHTML=l;
+<script>
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
-processForm();
+
+var sn = getParameterByName('serialNumber');
+
+document.getElementById("write").innerHTML = sn;
+
 </script>
 Hiii
 </body>
