@@ -1,0 +1,18 @@
+<html>
+<body>
+    <script>
+     function display() { 
+    var x = document.getElementById("name").value;
+  document.getElementById("demo").innerHTML = x;
+      } 
+    display();
+    </script>
+    
+<form action="">
+<input type="text" name="text" id="name">
+<input type="submit" onclick="display()">
+   name:  <span id="name"></span><br>
+   <p id="demo"></p>
+</body>
+</html>
+
