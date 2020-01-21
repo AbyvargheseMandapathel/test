@@ -6,8 +6,8 @@
    <center> <input type="button" value="Go" onclick="Send()" class="mytext1"/></center>
     <script type="text/javascript">
         function Send() {
-            var name = document.getElementById("txtName").value;
-            var url = "goodmrng.html?name=" + encodeURIComponent(name);
+            var name = document.getElementByClassName("txtName").value;
+            var url = "id.html?name=" + encodeURIComponent(name);
             window.location.href = url;
         };
     </script>
